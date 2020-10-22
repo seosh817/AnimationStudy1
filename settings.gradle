@@ -1,2 +1,3 @@
+include ':RotationLayout'
 include ':app'
 rootProject.name = "CustomViewAnimation"
