@@ -40,11 +40,12 @@
             </io.github.slflfl12.rotationlayout.RotationLayout>-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tab_parent"
             android:layout_width="200dp"
             android:layout_height="70dp"
             android:background="@drawable/background_parent"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/iv_simple">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -52,46 +53,43 @@
                 android:layout_width="100dp"
                 android:layout_height="0dp"
                 android:background="@drawable/background_child"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/text_tab_hospital"
+                android:id="@+id/tv_left"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="18dp"
+                android:drawablePadding="2dp"
+                android:gravity="center_vertical"
                 android:text="왼쪽"
+                android:textColor="@color/selector_text_tab"
                 android:textSize="16dp"
                 android:textStyle="bold"
-                android:textColor="@color/selector_text_tab"
-                android:gravity="center_vertical"
-                android:drawablePadding="2dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginStart="22dp"
-                android:layout_marginBottom="18dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/text_tab_pharmacy"
+                android:id="@+id/tv_right"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="28dp"
+                android:layout_marginBottom="18dp"
+                android:drawablePadding="2dp"
+                android:gravity="center_vertical"
                 android:text="오른쪽"
+                android:textColor="@color/selector_text_tab"
                 android:textSize="16dp"
                 android:textStyle="bold"
-                android:textColor="@color/selector_text_tab"
-                android:gravity="center_vertical"
-                android:drawablePadding="2dp"
-                android:layout_marginTop="14dp"
-                android:layout_marginEnd="20dp"
-                android:layout_marginBottom="18dp"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

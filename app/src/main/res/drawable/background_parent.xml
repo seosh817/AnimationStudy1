@@ -7,7 +7,7 @@
         android:color="@color/colorGray"
         />
     <corners
-        android:radius="24dp"
+        android:radius="40dp"
         />
 
 </shape>
