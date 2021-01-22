@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="interpolator" format="reference" />
+
+    <declare-styleable name="InterpolatorView">
+        <attr name="interpolator" />
+    </declare-styleable>
+</resources>
