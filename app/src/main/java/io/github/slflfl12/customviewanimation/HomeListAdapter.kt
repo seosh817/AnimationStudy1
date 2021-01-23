@@ -4,11 +4,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.ActionOnlyNavDirections
 import androidx.recyclerview.widget.RecyclerView
 
-class MainListAdapter: RecyclerView.Adapter<MainListAdapter.MainViewHolder>() {
+class HomeListAdapter : RecyclerView.Adapter<HomeListAdapter.MainViewHolder>() {
 
-    private val list = mutableListOf<String>()
+    private val list = listOf<NavItem>(
+        NavItem(R.string.interpolator, ActionOnlyNavDirections(R.id.action_to_interpolator))
+    )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         return LayoutInflater.from(parent.context)
@@ -23,12 +26,12 @@ class MainListAdapter: RecyclerView.Adapter<MainListAdapter.MainViewHolder>() {
     override fun getItemCount(): Int = list.size
 
 
-    class MainViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+    class MainViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         private val titleTextView = itemView.findViewById<TextView>(R.id.tv_title)
 
-        fun bind(title: String) {
-            titleTextView.text = title
+        fun bind(navItem: NavItem) {
+            titleTextView.setText(navItem.textResId)
         }
     }
 

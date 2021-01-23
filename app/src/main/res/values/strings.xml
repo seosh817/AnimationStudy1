@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CustomViewAnimation</string>
+    <string name="interpolator">Interpolator</string>
 </resources>
