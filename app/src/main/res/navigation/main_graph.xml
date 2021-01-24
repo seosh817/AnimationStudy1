@@ -11,7 +11,7 @@
 
     <fragment
         android:id="@+id/interpolator"
-        android:name="io.github.slflfl12.customviewanimation.InterpolatorFragment"
+        android:name="io.github.slflfl12.customviewanimation.interpolator.InterpolatorFragment"
         android:label="InterpolatorFragment" />
 
 

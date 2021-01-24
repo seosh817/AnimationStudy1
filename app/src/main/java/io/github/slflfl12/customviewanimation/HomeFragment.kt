@@ -6,12 +6,19 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import io.github.slflfl12.customviewanimation.databinding.FragmentHomeBinding
 
 class HomeFragment: Fragment() {
 
     private val homeListAdapter: HomeListAdapter by lazy {
-        HomeListAdapter()
+        HomeListAdapter().apply {
+            onItemClickListener = object: HomeListAdapter.OnItemClickListener {
+                override fun onItemClick(navItem: NavItem) {
+                    findNavController().navigate(navItem.direction)
+                }
+            }
+        }
     }
 
     private lateinit var binding: FragmentHomeBinding

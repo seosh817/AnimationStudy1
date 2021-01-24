@@ -1,4 +1,4 @@
-package io.github.slflfl12.customviewanimation
+package io.github.slflfl12.customviewanimation.interpolator
 
 import android.animation.Animator
 import android.animation.ValueAnimator
@@ -10,6 +10,7 @@ import android.view.animation.AnimationUtils
 import android.view.animation.Interpolator
 import android.view.animation.LinearInterpolator
 import androidx.annotation.InterpolatorRes
+import io.github.slflfl12.customviewanimation.R
 import kotlin.math.min
 
 class InterpolatorView @JvmOverloads constructor(
@@ -54,7 +55,8 @@ class InterpolatorView @JvmOverloads constructor(
     private var fraction = 0f
 
     init {
-        val a = context.obtainStyledAttributes(attrs, R.styleable.InterpolatorView, 0, 0)
+        val a = context.obtainStyledAttributes(attrs,
+            R.styleable.InterpolatorView, 0, 0)
 
         val interpolatorId = a.getResourceId(R.styleable.InterpolatorView_interpolator, 0)
         if (interpolatorId > 0) {

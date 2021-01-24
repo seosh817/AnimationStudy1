@@ -9,14 +9,19 @@ import androidx.recyclerview.widget.RecyclerView
 
 class HomeListAdapter : RecyclerView.Adapter<HomeListAdapter.MainViewHolder>() {
 
-    private val list = listOf<NavItem>(
+    var onItemClickListener: OnItemClickListener? = null
+
+    private val list = listOf(
         NavItem(R.string.interpolator, ActionOnlyNavDirections(R.id.action_to_interpolator))
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         return LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_main, parent, false)
+            .inflate(R.layout.item_home, parent, false)
             .let { MainViewHolder(it) }
+            .apply {
+                onItemClickListener?.onItemClick(list[adapterPosition])
+            }
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
@@ -25,6 +30,9 @@ class HomeListAdapter : RecyclerView.Adapter<HomeListAdapter.MainViewHolder>() {
 
     override fun getItemCount(): Int = list.size
 
+    interface OnItemClickListener {
+        fun onItemClick(navItem: NavItem)
+    }
 
     class MainViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
