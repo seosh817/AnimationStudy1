@@ -6,4 +6,8 @@
     <declare-styleable name="InterpolatorView">
         <attr name="interpolator" />
     </declare-styleable>
+
+    <declare-styleable name="CheckedImageView">
+        <attr name="checked" format="boolean"/>
+    </declare-styleable>
 </resources>

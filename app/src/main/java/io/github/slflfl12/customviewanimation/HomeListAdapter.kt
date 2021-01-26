@@ -12,7 +12,9 @@ class HomeListAdapter : RecyclerView.Adapter<HomeListAdapter.MainViewHolder>() {
     var onItemClickListener: OnItemClickListener? = null
 
     private val list = listOf(
-        NavItem(R.string.interpolator, ActionOnlyNavDirections(R.id.action_to_interpolator))
+        NavItem(R.string.interpolator, ActionOnlyNavDirections(R.id.action_to_interpolator)),
+        NavItem(R.string.title_drawable, ActionOnlyNavDirections(R.id.action_to_drawable)),
+        NavItem(R.string.title_drawable, ActionOnlyNavDirections(R.id.action_to_ripple))
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {

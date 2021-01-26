@@ -14,10 +14,29 @@
         android:name="io.github.slflfl12.customviewanimation.interpolator.InterpolatorFragment"
         android:label="InterpolatorFragment" />
 
+    <fragment
+        android:id="@+id/drawableFragment"
+        android:name="io.github.slflfl12.customviewanimation.drawable.DrawableFragment"
+        android:label="DrawableFragment" />
+
+    <fragment
+        android:id="@+id/rippleFragment"
+        android:name="io.github.slflfl12.customviewanimation.drawable.ripple.RippleFragment"
+        android:label="RippleFragment" />
 
     <action
         android:id="@+id/action_to_interpolator"
         app:destination="@id/interpolator" />
+
+    <action
+        android:id="@+id/action_to_drawable"
+        app:destination="@id/drawableFragment" />
+
+    <action
+        android:id="@+id/action_to_ripple"
+        app:destination="@id/rippleFragment" />
+
+
 
 
 </navigation>

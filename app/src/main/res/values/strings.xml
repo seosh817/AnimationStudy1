@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">CustomViewAnimation</string>
     <string name="interpolator">Interpolator</string>
+    <string name="title_drawable">Drawable Animation</string>
 </resources>
