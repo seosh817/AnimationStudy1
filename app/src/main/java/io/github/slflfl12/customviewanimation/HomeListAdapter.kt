@@ -22,7 +22,9 @@ class HomeListAdapter : RecyclerView.Adapter<HomeListAdapter.MainViewHolder>() {
             .inflate(R.layout.item_home, parent, false)
             .let { MainViewHolder(it) }
             .apply {
-                onItemClickListener?.onItemClick(list[adapterPosition])
+                itemView.setOnClickListener {
+                    onItemClickListener?.onItemClick(list[adapterPosition])
+                }
             }
     }
 
