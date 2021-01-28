@@ -41,6 +41,7 @@ class DrawableFragment: Fragment() {
         animator.start()
     }
 
+    // 0 ~ 10000
     private fun updateUI(fraction: Float) {
         binding.ivBatteryClip.setImageLevel((fraction * 10000).toInt())
     }
