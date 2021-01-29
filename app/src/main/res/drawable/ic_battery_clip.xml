@@ -4,7 +4,7 @@
     <item>
         <clip
             android:clipOrientation="horizontal"
-            android:gravity="bottom"
+            android:gravity="start"
             android:drawable="@drawable/ic_battery_100" />
     </item>
 

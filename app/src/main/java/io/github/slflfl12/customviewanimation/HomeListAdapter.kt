@@ -14,7 +14,7 @@ class HomeListAdapter : RecyclerView.Adapter<HomeListAdapter.MainViewHolder>() {
     private val list = listOf(
         NavItem(R.string.interpolator, ActionOnlyNavDirections(R.id.action_to_interpolator)),
         NavItem(R.string.title_drawable, ActionOnlyNavDirections(R.id.action_to_drawable)),
-        NavItem(R.string.title_drawable, ActionOnlyNavDirections(R.id.action_to_ripple))
+        NavItem(R.string.title_ripple, ActionOnlyNavDirections(R.id.action_to_ripple))
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
