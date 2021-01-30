@@ -24,6 +24,11 @@
         android:name="io.github.slflfl12.customviewanimation.drawable.ripple.RippleFragment"
         android:label="RippleFragment" />
 
+    <fragment
+        android:id="@+id/gradientFragment"
+        android:name="io.github.slflfl12.customviewanimation.drawable.gradient.GradientFragment"
+        android:label="GradientFragment" />
+
     <action
         android:id="@+id/action_to_interpolator"
         app:destination="@id/interpolator" />
@@ -36,7 +41,9 @@
         android:id="@+id/action_to_ripple"
         app:destination="@id/rippleFragment" />
 
-
+    <action
+        android:id="@+id/action_to_gradient"
+        app:destination="@+id/gradientFragment" />
 
 
 </navigation>

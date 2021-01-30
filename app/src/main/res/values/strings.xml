@@ -3,4 +3,5 @@
     <string name="interpolator">Interpolator</string>
     <string name="title_drawable">Drawable Animation</string>
     <string name="title_ripple">Ripple Animation</string>
+    <string name="title_gradient">Gradient Animation</string>
 </resources>

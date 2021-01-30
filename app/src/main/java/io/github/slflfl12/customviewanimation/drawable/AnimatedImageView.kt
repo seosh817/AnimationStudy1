@@ -17,7 +17,6 @@ open class AnimatedImageView @JvmOverloads constructor(
     private var isAttached: Boolean = false
     private var allowAnimation = true
 
-
     private var drawableId: Int = 0
 
     fun setAllowAnimation(allowAnimation: Boolean) {
