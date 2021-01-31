@@ -21,4 +21,10 @@ class GradientFragment: Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_gradient, container, false)
         return binding.root
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.gradientCircle.clipToOval(true)
+        binding.gradientRoundRect.clipToRoundRect(resources.getDimension(R.dimen.gradient_clip_radius))
+    }
 }
