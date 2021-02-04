@@ -58,6 +58,16 @@
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:layout_margin="4dp" />
+                <io.github.slflfl12.customviewanimation.drawable.gradient.AnimatedBorderView
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_margin="4dp"
+                    />
+                <io.github.slflfl12.customviewanimation.drawable.gradient.AnimatedStarView
+                    android:layout_width="@dimen/icon_size"
+                    android:layout_height="@dimen/icon_size"
+                    android:layout_margin="4dp"
+                    />
 
 
             </LinearLayout>

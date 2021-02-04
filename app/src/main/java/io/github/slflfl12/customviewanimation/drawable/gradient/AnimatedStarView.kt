@@ -34,6 +34,7 @@ class AnimatedStarView @JvmOverloads constructor(
         })
     }
 
+    // https://stackoverflow.com/questions/13640541/view-ondrawcanvas-c-versus-drawcanvas-c-in-android
     override fun draw(canvas: Canvas) {
         if (clipOuter) {
             canvas.clipOuter(clipPath)
@@ -43,6 +44,7 @@ class AnimatedStarView @JvmOverloads constructor(
         super.draw(canvas)
     }
 
+    //https://liveupdate.tistory.com/127
     private fun Canvas.clipOuter(path: Path) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             clipOutPath(path)
