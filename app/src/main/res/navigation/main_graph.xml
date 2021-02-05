@@ -29,6 +29,11 @@
         android:name="io.github.slflfl12.customviewanimation.drawable.gradient.GradientFragment"
         android:label="GradientFragment" />
 
+    <fragment
+        android:id="@+id/loadingFragment"
+        android:name="io.github.slflfl12.customviewanimation.drawable.loading.LoadingFragment"
+        android:label="LoadingFragment" />
+
     <action
         android:id="@+id/action_to_interpolator"
         app:destination="@id/interpolator" />
@@ -44,6 +49,10 @@
     <action
         android:id="@+id/action_to_gradient"
         app:destination="@+id/gradientFragment" />
+
+    <action
+        android:id="@+id/action_to_loading"
+        app:destination="@id/loadingFragment" />
 
 
 </navigation>
