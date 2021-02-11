@@ -61,34 +61,53 @@
 
             <androidx.core.widget.ContentLoadingProgressBar
                 android:id="@+id/pb_content_loading_custom"
+                style="@style/Widget.AppCompat.ProgressBar"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
-                app:layout_constraintStart_toEndOf="@id/pb_content_loading"
-                app:layout_constraintTop_toTopOf="parent"
-                style="@style/Widget.AppCompat.ProgressBar"
                 android:indeterminateDrawable="@drawable/loading_custom"
                 android:indeterminateDuration="1000"
-                />
+                app:layout_constraintStart_toEndOf="@id/pb_content_loading"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <ProgressBar
                 android:id="@+id/pb_loading_horizontal"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/pb_content_loading_custom"
-                android:progress="80"
                 android:layout_margin="4dp"
-                />
+                android:progress="80"
+                app:layout_constraintTop_toBottomOf="@id/pb_content_loading_custom" />
 
             <androidx.core.widget.ContentLoadingProgressBar
                 android:id="@+id/pb_content_loading_horizontal"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/pb_loading_horizontal"
-                android:progress="80"
                 android:layout_margin="4dp"
-                />
+                android:progress="80"
+                app:layout_constraintTop_toBottomOf="@id/pb_loading_horizontal" />
+
+            <ProgressBar
+                android:id="@+id/pb_loading_horizontal_custom"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:progress="500"
+                android:progressDrawable="@drawable/background_drawable_loading"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pb_content_loading_horizontal" />
+
+            <ProgressBar
+                android:id="@+id/pb_content_loading_horizontal_custom"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000"
+                android:progress="500"
+                android:progressDrawable="@drawable/background_drawable_loading"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pb_loading_horizontal_custom" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
