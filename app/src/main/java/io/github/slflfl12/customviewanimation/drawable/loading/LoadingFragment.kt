@@ -40,8 +40,10 @@ class LoadingFragment: Fragment() {
         animator.addUpdateListener {
             binding.pbLoadingHorizontal.setProgress(it.animatedFraction)
             binding.pbLoadingHorizontalCustom.setProgress(it.animatedFraction)
-
+            binding.pbContentLoadingHorizontal.setProgress(it.animatedFraction)
+            binding.pbContentLoadingHorizontalCustom.setProgress(it.animatedFraction)
         }
+        binding.pbStageView.startStageAnimation(1f)
     }
 
     private fun ProgressBar.setProgress(fraction: Float) {

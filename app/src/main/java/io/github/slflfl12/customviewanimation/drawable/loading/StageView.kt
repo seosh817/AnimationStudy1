@@ -4,13 +4,13 @@ import android.animation.ValueAnimator
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.DrawableRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.animation.doOnEnd
 import androidx.core.content.ContextCompat
-import androidx.databinding.DataBindingUtil
 import io.github.slflfl12.customviewanimation.R
 import io.github.slflfl12.customviewanimation.databinding.ViewStageBinding
 import io.github.slflfl12.customviewanimation.interpolator.Interpolators
@@ -27,8 +27,11 @@ class StageView(
     private val binding: ViewStageBinding = ViewStageBinding.inflate(LayoutInflater.from(context), this, false)
 
 
+    init {
+        View.inflate(context, R.layout.view_stage, null)
+    }
 
-    private fun startStageAnimation(currentOffSet: Float) {
+    fun startStageAnimation(currentOffSet: Float) {
         resetStageEventAnimation()
         startAnimation(currentOffSet)
     }
