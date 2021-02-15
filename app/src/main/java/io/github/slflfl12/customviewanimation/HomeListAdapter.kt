@@ -16,7 +16,8 @@ class HomeListAdapter : RecyclerView.Adapter<HomeListAdapter.MainViewHolder>() {
         NavItem(R.string.title_drawable, ActionOnlyNavDirections(R.id.action_to_drawable)),
         NavItem(R.string.title_ripple, ActionOnlyNavDirections(R.id.action_to_ripple)),
         NavItem(R.string.title_gradient, ActionOnlyNavDirections(R.id.action_to_gradient)),
-        NavItem(R.string.title_drawable_loading, ActionOnlyNavDirections(R.id.action_to_loading))
+        NavItem(R.string.title_drawable_loading, ActionOnlyNavDirections(R.id.action_to_loading)),
+        NavItem(R.string.title_view_animation, ActionOnlyNavDirections(R.id.action_to_view_anim))
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
