@@ -16,7 +16,7 @@ import io.github.slflfl12.customviewanimation.databinding.ViewStageBinding
 import io.github.slflfl12.customviewanimation.interpolator.Interpolators
 
 
-class StageView(
+class StageView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyle: Int = 0
@@ -24,12 +24,9 @@ class StageView(
 
     private var progressAnimator: ValueAnimator? = null
 
-    private val binding: ViewStageBinding = ViewStageBinding.inflate(LayoutInflater.from(context), this, false)
+    private val binding: ViewStageBinding = ViewStageBinding.inflate(LayoutInflater.from(context), this, true)
 
 
-    init {
-        View.inflate(context, R.layout.view_stage, null)
-    }
 
     fun startStageAnimation(currentOffSet: Float) {
         resetStageEventAnimation()
@@ -67,7 +64,7 @@ class StageView(
     }
 
     private fun renderProgress(fraction: Float) {
-        binding.pbStage.setImageLevel((1000*fraction).toInt())
+        binding.pbStage.setImageLevel((10000*fraction).toInt())
         binding.progressThumb.translationX = binding.pbStage.width * fraction
         when {
             fraction >= 1f -> binding.count3.startBounceAnimation()
