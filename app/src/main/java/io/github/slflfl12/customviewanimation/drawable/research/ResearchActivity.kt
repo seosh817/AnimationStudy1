@@ -1,16 +1,19 @@
-package io.github.slflfl12.customviewanimation
+package io.github.slflfl12.customviewanimation.drawable.research
 
 import android.os.Bundle
 import android.view.animation.BounceInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
+import io.github.slflfl12.customviewanimation.R
 import io.github.slflfl12.customviewanimation.databinding.ActivityResearchBinding
 
 class ResearchActivity : AppCompatActivity() {
     private lateinit var binding: ActivityResearchBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_research)
+        binding = DataBindingUtil.setContentView(this,
+            R.layout.activity_research
+        )
 
         /*       val rotationTextView = RotationAnimation.Builder().setSpeed(3000).setTurn(1).build()
                rotationTextView.startAnimation(binding.rotationTextView)
