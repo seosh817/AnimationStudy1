@@ -19,6 +19,6 @@ class ViewAnimationFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_viewanim, container, false)
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return binding.root
     }
 }

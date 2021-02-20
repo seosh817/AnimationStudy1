@@ -49,11 +49,11 @@ open class AnimatedImageView @JvmOverloads constructor(
     }
 
     override fun setImageDrawable(drawable: Drawable?) {
-        if(drawable!= null) {
+        drawableId = if(drawable!= null) {
             if(drawableId == drawable.hashCode()) return
-            drawableId = drawable.hashCode()
+            drawable.hashCode()
         } else {
-            drawableId = 0
+            0
         }
         super.setImageDrawable(drawable)
         updateAnim()
