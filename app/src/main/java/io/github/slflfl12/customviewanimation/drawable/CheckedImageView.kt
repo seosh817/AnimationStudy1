@@ -3,6 +3,8 @@ package io.github.slflfl12.customviewanimation.drawable
 import android.content.Context
 import android.util.AttributeSet
 import android.view.View
+import android.view.accessibility.AccessibilityEvent
+import android.view.accessibility.AccessibilityNodeInfo
 import android.widget.Checkable
 import androidx.appcompat.widget.AppCompatImageView
 import io.github.slflfl12.customviewanimation.R
@@ -75,4 +77,20 @@ class CheckedImageView : AppCompatImageView, Checkable {
         }
         return drawableState
     }
+
+    // text를 제외한 추가적인 정보를 Set 하기 위한 메소드, super콜 이후 추가적으로 set하는 애들을 구현하는것이 좋다. (checkbox type, state..)
+    override fun onInitializeAccessibilityEvent(event: AccessibilityEvent) {
+        super.onInitializeAccessibilityEvent(event)
+        event.className = CheckedImageView::class.java.name
+        event.isChecked = mChecked
+    }
+
+    override fun onInitializeAccessibilityNodeInfo(info: AccessibilityNodeInfo) {
+        super.onInitializeAccessibilityNodeInfo(info)
+        info.className = CheckedImageView::class.java.name
+        info.isCheckable = true
+        info.isChecked = mChecked
+    }
+
+
 }
