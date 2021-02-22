@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ResearchActivity">
+        tools:context=".drawable.research.ResearchActivity">
 
         <!--        <io.github.slflfl12.rotationlayout.RotationLayout
                     android:id="@+id/rotation_text_view"
