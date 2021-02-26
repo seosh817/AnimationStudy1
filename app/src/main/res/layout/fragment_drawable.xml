@@ -65,7 +65,7 @@
                 />
 
             <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
-                android:id="@+id/iv_animated_checK"
+                android:id="@+id/iv_animated_check"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
                 android:layout_margin="4dp"
@@ -73,6 +73,18 @@
                 android:src="@drawable/btn_check_material_anim"
                 app:layout_constraintTop_toBottomOf="@id/iv_rotate"
                 app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+                android:id="@+id/iv_landscape"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_margin="4dp"
+                android:scaleType="centerInside"
+                app:layout_constraintTop_toBottomOf="@id/iv_animated_check"
+                app:layout_constraintStart_toStartOf="parent"
+                android:background="@color/android1"
+                android:src="@drawable/ic_landscape_to_auto_rotate"
                 />
 
 

@@ -20,7 +20,7 @@ class CheckedImageView : AppCompatImageView, Checkable {
 
     constructor(context: Context) : super(context)
 
-    constructor(context: Context, attrs: AttributeSet) : this(context, attrs, 0)
+    constructor(context: Context, attrs: AttributeSet) : super(context, attrs, 0)
 
     constructor(context: Context, attrs: AttributeSet, defStyleAttr: Int) : super(
         context, attrs, defStyleAttr
@@ -71,7 +71,7 @@ class CheckedImageView : AppCompatImageView, Checkable {
 
     //refreshDrawableState()를 호출하면 onCreateDrawableState()가 호출됨
     override fun onCreateDrawableState(extraSpace: Int): IntArray { // 코드 상에서 view의 state를 관리하는 함수 (ex. pressed, selected...)
-        val drawableState = super.onCreateDrawableState(extraSpace + CHECKED_STATE_SET.size)
+        val drawableState = super.onCreateDrawableState(extraSpace + 1)
         if(mChecked) {
             View.mergeDrawableStates(drawableState, CHECKED_STATE_SET)
         }
