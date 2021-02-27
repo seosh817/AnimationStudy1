@@ -43,6 +43,7 @@
                     android:layout_margin="4dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_battery_anim" />
+
                 <io.github.slflfl12.customviewanimation.drawable.AnimatedImageView
                     android:id="@+id/iv_battery_clip"
                     android:layout_width="wrap_content"
@@ -60,9 +61,8 @@
                 android:layout_margin="4dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_animated_circle"
-                app:layout_constraintTop_toBottomOf="@id/ll_battery"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@id/ll_battery" />
 
             <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
                 android:id="@+id/iv_animated_check"
@@ -71,22 +71,30 @@
                 android:layout_margin="4dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/btn_check_material_anim"
-                app:layout_constraintTop_toBottomOf="@id/iv_rotate"
                 app:layout_constraintStart_toStartOf="parent"
-                />
+                app:layout_constraintTop_toBottomOf="@id/iv_rotate" />
 
             <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
                 android:id="@+id/iv_landscape"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
                 android:layout_margin="4dp"
-                android:scaleType="centerInside"
-                app:layout_constraintTop_toBottomOf="@id/iv_animated_check"
-                app:layout_constraintStart_toStartOf="parent"
                 android:background="@color/android1"
+                android:scaleType="centerInside"
                 android:src="@drawable/ic_landscape_to_auto_rotate"
-                />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_animated_check" />
 
+            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+                android:id="@+id/iv_portrait"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_margin="4dp"
+                android:background="@color/android1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_portrait_to_auto_rotate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_landscape" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
