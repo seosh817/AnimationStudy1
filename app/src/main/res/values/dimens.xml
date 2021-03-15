@@ -3,4 +3,5 @@
     <dimen name="interpolator_circle_radius">4dp</dimen>
     <dimen name="icon_size">60dp</dimen>
     <dimen name="gradient_clip_radius">16dp</dimen>
+    <dimen name="bottom_naivagtion_height">80dp</dimen>
 </resources>
