@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
+import androidx.core.animation.doOnRepeat
+import androidx.core.view.postOnAnimationDelayed
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import io.github.slflfl12.customviewanimation.R
@@ -34,6 +36,9 @@ class DrawableFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        animator.doOnRepeat {
+            updateRippleEffect()
+        }
         animator.addUpdateListener {
             Log.d("seunghwan", "${it.animatedFraction}, ${it.animatedValue}")
             updateUI(it.animatedFraction)
@@ -46,9 +51,29 @@ class DrawableFragment: Fragment() {
         binding.ivBatteryClip.setImageLevel((fraction * 10000).toInt())
     }
 
+    private fun updateRippleEffect() {
+        binding.ivAnimatedCheck.toggle()
+
+        binding.ivBatteryVerticalChecked.performRippleEffect()
+        binding.ivBatteryVerticalChecked.toggle()
+
+        binding.ivStarIcon.toggle()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         animator.removeAllUpdateListeners()
         animator.cancel()
     }
+
+    private fun View.performRippleEffect() {
+        isPressed = true
+        postOnAnimationDelayed(50) {
+            isPressed = false
+        }
+    }
+
+
+
+
 }
