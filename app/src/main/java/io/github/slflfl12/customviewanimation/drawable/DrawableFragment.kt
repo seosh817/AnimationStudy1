@@ -1,13 +1,17 @@
 package io.github.slflfl12.customviewanimation.drawable
 
 import android.animation.ValueAnimator
+import android.graphics.drawable.Animatable
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
+import android.widget.ImageView
+import androidx.annotation.DrawableRes
 import androidx.core.animation.doOnRepeat
+import androidx.core.content.ContextCompat
 import androidx.core.view.postOnAnimationDelayed
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -58,6 +62,16 @@ class DrawableFragment: Fragment() {
         binding.ivBatteryVerticalChecked.toggle()
 
         binding.ivStarIcon.toggle()
+
+        binding.ivPortrait.run {
+            if(isActivated) {
+                isActivated = false
+                setImageDrawableAndStart(R.drawable.ic_portrait_from_auto_rotate_animation)
+            } else {
+                isActivated = true
+                setImageDrawableAndStart(R.drawable.ic_portrait_to_auto_rotate_animation)
+            }
+        }
     }
 
     override fun onDestroyView() {
@@ -73,7 +87,13 @@ class DrawableFragment: Fragment() {
         }
     }
 
-
+    private fun ImageView.setImageDrawableAndStart(@DrawableRes resId: Int) {
+        val drawable = ContextCompat.getDrawable(context, resId)
+        setImageDrawable(drawable)
+        if (drawable is Animatable) {
+            drawable.start()
+        }
+    }
 
 
 }
