@@ -81,6 +81,15 @@ class DrawableFragment: Fragment() {
                 setImageDrawableAndStart(R.drawable.ic_landscape_to_auto_rotate_animation)
             }
         }
+        binding.ivFlash.run {
+            if(isActivated) {
+                isActivated = false
+                setImageDrawableAndStart(R.drawable.ic_signal_flashlight_enable_animation)
+            } else {
+                isActivated = true
+                setImageDrawableAndStart(R.drawable.ic_signal_flashlight_disable_animation)
+            }
+        }
     }
 
     override fun onDestroyView() {
