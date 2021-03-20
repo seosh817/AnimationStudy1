@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_info"
+        android:icon="@drawable/asld_nav_info"
+        android:title="Info" />
+    <item
+        android:id="@+id/navigation_schedule"
+        android:icon="@drawable/asld_nav_schedule"
+        android:title="Schedule" />
+
+    <item
+        android:id="@+id/navigation_agenda"
+        android:icon="@drawable/asld_nav_agenda"
+        android:title="Agenda" />
+
+</menu>

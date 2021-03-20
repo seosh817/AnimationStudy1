@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/star_checked"
+        android:drawable="@drawable/ic_star"
+        android:state_checked="true" />
+
+    <item
+        android:id="@+id/star_unchecked"
+        android:drawable="@drawable/ic_star_border"
+        android:state_checked="false" />
+
+    <transition
+        android:drawable="@drawable/avd_star_event"
+        android:fromId="@id/star_unchecked"
+        android:toId="@id/star_checked" />
+
+    <transition
+        android:drawable="@drawable/avd_unstar_event"
+        android:fromId="@id/star_checked"
+        android:toId="@id/star_unchecked" />
+
+
+</animated-selector>

@@ -17,13 +17,18 @@ class ViewPrac(context: Context) : View(context) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
 
         //measureSpec -> AT_MOST, EXACTLY, UNSPECIFIED
-        // EXACTLY -> fill_parent or match_parent 이 경우 크기를 미리 지정해서 width와 height을 넘겨주므로 MeasureSpec.getSize()로 그냥 사용하면 된다.
-        // AT_MOST -> wrap_content일 경우
-        // UNSPECIFIED -> View를 생성했을 때
+        // EXACTLY -> fill_parent or match_parent 혹은 dp로 크기를 정했을 경우(정확한 크기를 지정하였을 때) 크기를 미리 지정해서 width와 height을 넘겨주므로 MeasureSpec.getSize()로 그냥 사용하면 된다. (외부에서 크기가 정해져있음)
+        // AT_MOST -> wrap_content일 경우 (별다른 크기를 지정해주지 않았을 경우 AT_MOST가 리턴됨 -> 그래서 크기를 내가 지정해주어야 한다)
+        // UNSPECIFIED -> mode가 셋팅되지 않은 크기가 넘어올 때
         widthMeasureSpec
         MeasureSpec.getMode(widthMeasureSpec) // 이거 하면 셋중하나가 나옴 -> AT_MOST(match_parent), EXACTLY
         MeasureSpec.getSize(widthMeasureSpec) // 만약 30dp면 30dp에 해당하는 픽셀이 날라올것 기본 적인건 super.onMeasure에서 해줌
         setMeasuredDimension(measuredWidth, measuredWidth)
+
+        //만약 AT_MOST나 EXACTLY라면 view 자체에서 크기를 아니까 MeasureSpec.getSize를 통해 사이즈를 지정하고
+        //UNSPECIFIED라면 suggestedMinimumWidth사이즈로 지정
+        val width = getDefaultSize(suggestedMinimumWidth, widthMeasureSpec)
+        val height = getDefaultSize(suggestedMinimumHeight, heightMeasureSpec)
 
         MeasureSpec.getSize(widthMeasureSpec) // xml에 있는 width 값이 날라옴
 

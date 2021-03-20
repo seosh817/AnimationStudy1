@@ -4,6 +4,7 @@ import android.content.Context
 import android.graphics.drawable.AnimationDrawable
 import android.graphics.drawable.Drawable
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import androidx.appcompat.widget.AppCompatImageView
 
@@ -42,6 +43,8 @@ open class AnimatedImageView @JvmOverloads constructor(
         } else {
             setAnimationDrawable(null)
         }
+        Log.d("seunghwan", "anim = ${anim}")
+
     }
 
     protected open fun setAnimationDrawable(drawable: AnimationDrawable?) {
@@ -49,14 +52,16 @@ open class AnimatedImageView @JvmOverloads constructor(
     }
 
     override fun setImageDrawable(drawable: Drawable?) {
-        if(drawable!= null) {
+        drawableId = if(drawable!= null) {
             if(drawableId == drawable.hashCode()) return
-            drawableId = drawable.hashCode()
+            drawable.hashCode()
         } else {
-            drawableId = 0
+            0
         }
         super.setImageDrawable(drawable)
         updateAnim()
+        Log.d("seunghwan", "imageDrawable = ${drawableId}")
+
     }
 
     override fun setImageResource(resId: Int) {
@@ -64,6 +69,7 @@ open class AnimatedImageView @JvmOverloads constructor(
         drawableId = resId
         super.setImageResource(resId)
         updateAnim()
+        Log.d("seunghwan", "imageResource = ${drawableId}")
     }
 
     override fun onAttachedToWindow() {

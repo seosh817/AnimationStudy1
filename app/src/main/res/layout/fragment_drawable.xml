@@ -30,6 +30,7 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <LinearLayout
+                android:id="@+id/ll_battery"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -42,6 +43,7 @@
                     android:layout_margin="4dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_battery_anim" />
+
                 <io.github.slflfl12.customviewanimation.drawable.AnimatedImageView
                     android:id="@+id/iv_battery_clip"
                     android:layout_width="wrap_content"
@@ -52,6 +54,104 @@
 
             </LinearLayout>
 
+            <io.github.slflfl12.customviewanimation.drawable.AnimatedImageView
+                android:id="@+id/iv_rotate"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_margin="4dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_animated_circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_battery" />
+
+            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+                android:id="@+id/iv_animated_check"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_margin="4dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/btn_check_material_anim"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_rotate" />
+
+            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+                android:id="@+id/iv_landscape"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_margin="4dp"
+                android:background="@color/android1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_landscape_to_auto_rotate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_animated_check" />
+
+            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+                android:id="@+id/iv_portrait"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_margin="4dp"
+                android:background="@color/android1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_portrait_to_auto_rotate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_landscape" />
+
+            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+                android:id="@+id/iv_flash"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_margin="4dp"
+                android:background="@color/android1"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_signal_flashlight_disable"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_portrait" />
+
+            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+                android:id="@+id/iv_battery_vertical_checked"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_margin="4dp"
+                android:background="?android:selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/asld_vertical_battery"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_flash" />
+
+            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+                android:id="@+id/iv_star_icon"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:layout_margin="4dp"
+                android:background="@drawable/ic_oval"
+                android:scaleType="centerInside"
+                android:src="@drawable/asld_star_checked"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_battery_vertical_checked" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                style="@style/Widget.MaterialComponents.BottomNavigationView.Colored"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/bottom_naivagtion_height"
+                android:layout_marginBottom="16dp"
+                app:labelVisibilityMode="labeled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:menu="@menu/navigation"
+                />
+
+ <!--           <io.github.slflfl12.customviewanimation.drawable.TemporaryView
+                android:id="@+id/iv_temporary"
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                android:background="@drawable/ic_oval"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintTop_toBottomOf="@id/iv_star_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                />-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
