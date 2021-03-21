@@ -39,6 +39,11 @@
         android:name="io.github.slflfl12.customviewanimation.viewanim.ViewAnimationFragment"
         android:label="ViewAnimationFragment" />
 
+    <fragment
+        android:id="@+id/viewPropertyFragment"
+        android:name="io.github.slflfl12.customviewanimation.view_property.ViewPropertyFragment"
+        android:label="ViewPropertyFragment" />
+
     <action
         android:id="@+id/action_to_interpolator"
         app:destination="@id/interpolator" />
@@ -62,6 +67,10 @@
     <action
         android:id="@+id/action_to_view_anim"
         app:destination="@id/viewAnimFragment" />
+
+    <action
+        android:id="@+id/action_to_view_property"
+        app:destination="@id/viewPropertyFragment" />
 
 
 </navigation>
