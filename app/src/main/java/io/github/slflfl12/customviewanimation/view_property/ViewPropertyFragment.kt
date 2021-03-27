@@ -10,8 +10,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import io.github.slflfl12.customviewanimation.R
 import io.github.slflfl12.customviewanimation.databinding.FragmentViewPropertyBinding
+import io.github.slflfl12.customviewanimation.interpolator.Interpolators
 
-class ViewPropertyFragment: Fragment() {
+class ViewPropertyFragment: Fragment(), ViewAnimation {
 
     private lateinit var binding: FragmentViewPropertyBinding
 
@@ -36,11 +37,68 @@ class ViewPropertyFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.doOnLayout {
-
+            maxTranslationX = view.measuredWidth - resources.getDimension(R.dimen.icon_size)
+            maxTranslationY = resources.getDimension(R.dimen.icon_size) * -2
+            uiHandler.sendEmptyMessage(UPDATE_UI)
         }
     }
 
     private fun updateUi() {
+        binding.icon.run {
+            animate().cancel()
+            val targetTransX: Float
+            val targetTransY: Float
+            val targetRotation: Float
+            val targetScaleX: Float
+            val targetScaleY: Float
+            val targetAlpha: Float
+            if(binding.icon.isChecked) {
+                targetTransX = 0f
+                targetTransY = 0f
+                targetRotation = 0f
+                targetScaleX = 1f
+                targetScaleY = 1f
+                targetAlpha = 1f
+            } else {
+                targetTransX = maxTranslationX
+                targetTransY = maxTranslationY
+                targetRotation = 360f
+                targetScaleX = 2f
+                targetScaleY = .5f
+                targetAlpha = .5f
+            }
+            animate()
+                .setDuration(1000)
+                .setInterpolator(Interpolators.ACCELERATE_DECELERATE)
+                .rotation(targetRotation)
+                .scaleX(targetScaleX)
+                .scaleY(targetScaleY)
+                .alpha(targetAlpha)
+                .translationX(targetTransX)
+                .translationY(targetTransY)
+                .withEndAction {
+                    isChecked = !isChecked
+                    uiHandler.sendEmptyMessage(UPDATE_UI)
+                }
+            if(binding.icon.isChecked) {
+                binding.dim.animateOutForDim()
+                binding.btnFlash.animateOutForHeader()
+                binding.starButton.animateOutForHeader()
+                binding.btnToys.animateOutForHeader()
+                binding.btnClose.animateOutForCloseButton()
+            } else {
+                binding.dim.animateInForDim()
+                binding.btnFlash.animateInForHeader(0)
+                binding.starButton.animateInForHeader(70)
+                binding.btnToys.animateInForHeader(140)
+                binding.btnClose.animateInForCloseButton()
+            }
+        }
+    }
+
+    override fun onDestroyView() {
+        uiHandler.removeMessages(UPDATE_UI)
+        super.onDestroyView()
     }
 
 
