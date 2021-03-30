@@ -6,12 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.SlideInUpAnimator
 import io.github.slflfl12.customviewanimation.R
 import io.github.slflfl12.customviewanimation.databinding.FragmentViewPropertyRecyclerViewBinding
 
 class RecyclerViewFragment: Fragment() {
 
     private lateinit var binding: FragmentViewPropertyRecyclerViewBinding
+    private val listAdapter : ViewPropertyRecyclerAdapter by lazy {
+        ViewPropertyRecyclerAdapter()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,5 +28,10 @@ class RecyclerViewFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.listView.itemAnimator = SlideInUpAnimator()
+        binding.listView.adapter = listAdapter
+        binding.fab.setOnClickListener {
+            listAdapter.addItemToLast()
+        }
     }
 }
