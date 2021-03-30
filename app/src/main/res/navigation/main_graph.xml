@@ -39,6 +39,16 @@
         android:name="io.github.slflfl12.customviewanimation.viewanim.ViewAnimationFragment"
         android:label="ViewAnimationFragment" />
 
+    <fragment
+        android:id="@+id/viewPropertyFragment"
+        android:name="io.github.slflfl12.customviewanimation.view_property.ViewPropertyFragment"
+        android:label="ViewPropertyFragment" />
+
+    <fragment
+        android:id="@+id/recyclerViewFragment"
+        android:name="io.github.slflfl12.customviewanimation.view_property.recycler_view.RecyclerViewFragment"
+        android:label="RecyclerViewFragment" />
+
     <action
         android:id="@+id/action_to_interpolator"
         app:destination="@id/interpolator" />
@@ -62,6 +72,14 @@
     <action
         android:id="@+id/action_to_view_anim"
         app:destination="@id/viewAnimFragment" />
+
+    <action
+        android:id="@+id/action_to_view_property"
+        app:destination="@id/viewPropertyFragment" />
+
+    <action
+        android:id="@+id/action_to_view_property_recycler_view"
+        app:destination="@id/recyclerViewFragment" />
 
 
 </navigation>
