@@ -8,4 +8,6 @@
     <string name="title_view_animation">View Animation</string>
     <string name="title_view_property">ViewProperty Animation</string>
     <string name="title_view_property_recycler_view">ViewPropertyAnimator (RecyclerView)</string>
+    <string name="title_view_animator">Animator</string>
+    <string name="title_animator">Animator</string>
 </resources>
