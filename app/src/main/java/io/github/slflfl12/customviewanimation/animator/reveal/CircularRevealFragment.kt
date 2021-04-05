@@ -4,7 +4,9 @@ import android.animation.Animator
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.ViewAnimationUtils
 import android.view.ViewGroup
+import android.view.animation.AccelerateInterpolator
 import android.view.animation.Animation
 import androidx.core.animation.doOnEnd
 import androidx.core.view.doOnLayout
@@ -13,6 +15,7 @@ import com.google.android.material.circularreveal.CircularRevealCompat
 import com.google.android.material.circularreveal.CircularRevealLinearLayout
 import com.google.android.material.circularreveal.CircularRevealWidget
 import io.github.slflfl12.customviewanimation.databinding.FragmentAnimatorRevealBinding
+import io.github.slflfl12.customviewanimation.interpolator.Interpolators
 import kotlin.math.hypot
 
 class CircularRevealFragment: Fragment() {
@@ -44,7 +47,17 @@ class CircularRevealFragment: Fragment() {
                 binding.cardRevealView.unFoldMenu()
             }
         }
+        binding.fab.setOnClickListener {
+            if(it.isSelected) {
+                it.isSelected = false
+                binding.revealView.hideContents()
+            } else {
+                it.isSelected = true
+                binding.revealView.showContents()
+            }
+        }
     }
+
 
 
 
@@ -65,6 +78,26 @@ class CircularRevealFragment: Fragment() {
             startRadius, endRadius
         ).apply(block)
     }
+
+    private fun View.hideContents() {
+        createCircularRevealOf(binding.fab, radius, 0f) {
+            duration = 300
+            interpolator = Interpolators.ACCELERATE
+            doOnEnd {
+                visibility = View.GONE
+            }
+        }.start()
+    }
+
+    private fun View.showContents() {
+        visibility = View.VISIBLE
+        createCircularRevealOf(binding.fab, 0f, radius) {
+            duration = 300
+            interpolator = Interpolators.DECELERATE
+        }.start()
+    }
+
+
 
     private fun View.centerX(): Int {
         return (right + left) / 2
@@ -91,5 +124,23 @@ class CircularRevealFragment: Fragment() {
             duration = 500
         }.start()
     }
-}
 
+    private inline fun View.createCircularRevealOf(
+        target: View,
+        startRadius: Float,
+        endRadius: Float,
+        block: Animator.() -> Unit
+    ): Animator {
+        return ViewAnimationUtils.createCircularReveal(
+            this,
+            target.centerX(),
+            target.centerY(),
+            startRadius,
+            endRadius
+        ).apply(block)
+    }
+
+
+
+
+}
