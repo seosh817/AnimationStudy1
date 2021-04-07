@@ -56,6 +56,14 @@ class CircularRevealFragment: Fragment() {
                 binding.revealView.showContents()
             }
         }
+
+        binding.transformFab.setOnClickListener {
+            binding.transformFab.isExpanded = true
+        }
+
+        binding.scrim.setOnClickListener {
+            binding.transformFab.isExpanded = false
+        }
     }
 
 

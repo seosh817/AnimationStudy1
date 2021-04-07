@@ -222,6 +222,17 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+
+
+        <View
+            android:id="@+id/scrim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#66333333"
+            android:visibility="invisible"
+            app:layout_behavior="@string/fab_transformation_scrim_behavior"
+            tools:visibility="visible" />
+
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/transformFab"
             style="@style/Widget.MaterialComponents.FloatingActionButton"
@@ -233,17 +244,6 @@
             app:layout_constraintBottom_toTopOf="@id/fab"
             app:layout_constraintStart_toStartOf="parent"
             app:srcCompat="@drawable/ic_touch_app" />
-
-        <View
-            android:id="@+id/scrim"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#66333333"
-            android:visibility="invisible"
-            app:layout_behavior="@string/fab_transformation_scrim_behavior"
-            tools:visibility="visible" />
-
-
 
 
         <com.google.android.material.circularreveal.cardview.CircularRevealCardView
