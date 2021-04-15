@@ -47,6 +47,12 @@ class CircularRevealFragment: Fragment() {
                 binding.cardRevealView.unFoldMenu()
             }
         }
+
+        binding.dialogFab.setOnClickListener {
+            CircularRevealDialogFragment()
+                .show(childFragmentManager, null)
+        }
+
         binding.fab.setOnClickListener {
             if(it.isSelected) {
                 it.isSelected = false
