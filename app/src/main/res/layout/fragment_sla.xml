@@ -155,7 +155,7 @@
                     android:layout_height="0dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginBottom="8dp"
-                    android:text="This card cannot be clicked. Please click the above card."
+                    android:text="sla 예입니다."
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/unfold2"
                     app:layout_constraintStart_toStartOf="parent"
@@ -172,6 +172,35 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="30dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Button"
+                app:srcCompat="@drawable/ic_close"
+                android:stateListAnimator="@animator/mtrl_btn_state_list_anim"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/icon_size"
+                android:layout_height="@dimen/icon_size"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/ic_touch_app_24"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerInside"
+                android:elevation="4dp"
+                android:background="@drawable/ic_oval"
+                android:backgroundTint="@color/android1"
+                android:stateListAnimator="@animator/sla_fab"
+                />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
