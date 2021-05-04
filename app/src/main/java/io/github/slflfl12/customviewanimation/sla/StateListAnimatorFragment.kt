@@ -40,9 +40,9 @@ class StateListAnimatorFragment: Fragment() {
     private fun setExpand(expand: Boolean) {
         val duration = 200L
         val absTransX = if (expand) translation else 0f
-        binding.tvTitle.animate().setDuration(duration).scaleX(-absTransX)
-        binding.tvDescription.animate().setDuration(duration).scaleX(-absTransX)
-        binding.unfold.animate().setDuration(duration).scaleX(-absTransX)
+        binding.tvTitle.animate().setDuration(duration).translationX(-absTransX)
+        binding.tvDescription.animate().setDuration(duration).translationX(-absTransX)
+        binding.unfold.animate().setDuration(duration).translationX(absTransX)
 
         TransitionManager.beginDelayedTransition(binding.clContainer, AutoTransition().apply {
             this.duration = duration
