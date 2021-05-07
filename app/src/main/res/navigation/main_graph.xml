@@ -59,6 +59,11 @@
         android:name="io.github.slflfl12.customviewanimation.animator.reveal.CircularRevealFragment"
         android:label="CircularRevealFragment" />
 
+    <fragment
+        android:id="@+id/stateListAnimatorFragment"
+        android:name="io.github.slflfl12.customviewanimation.sla.StateListAnimatorFragment"
+        android:label="StateListAnimatorFragment" />
+
     <action
         android:id="@+id/action_to_interpolator"
         app:destination="@id/interpolator" />
@@ -98,6 +103,10 @@
     <action
         android:id="@+id/action_to_animator_circular_reveal"
         app:destination="@id/circularRevealFragment" />
+
+    <action
+        android:id="@+id/action_to_animator_state_list"
+        app:destination="@id/stateListAnimatorFragment" />
 
 
 </navigation>

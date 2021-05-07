@@ -11,4 +11,5 @@
     <string name="title_view_animator">Animator</string>
     <string name="title_animator">Animator</string>
     <string name="title_animator_circular_reveal">Animator (Circular Reveal)</string>
+    <string name="title_animator_state_list">StateListAnimator</string>
 </resources>
