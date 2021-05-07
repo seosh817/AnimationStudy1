@@ -64,6 +64,11 @@
         android:name="io.github.slflfl12.customviewanimation.sla.StateListAnimatorFragment"
         android:label="StateListAnimatorFragment" />
 
+    <fragment
+        android:id="@+id/flingFragment"
+        android:name="io.github.slflfl12.customviewanimation.dynamic.fling.FlingFragment"
+        android:label="FlingFragment" />
+
     <action
         android:id="@+id/action_to_interpolator"
         app:destination="@id/interpolator" />
@@ -107,6 +112,10 @@
     <action
         android:id="@+id/action_to_animator_state_list"
         app:destination="@id/stateListAnimatorFragment" />
+
+    <action
+        android:id="@+id/action_dynamic_fling"
+        app:destination="@id/flingFragment" />
 
 
 </navigation>

@@ -22,9 +22,10 @@ class HomeListAdapter : RecyclerView.Adapter<HomeListAdapter.MainViewHolder>() {
         NavItem(R.string.title_view_property_recycler_view, ActionOnlyNavDirections(R.id.action_to_view_property_recycler_view)),
         NavItem(R.string.title_view_animator, ActionOnlyNavDirections(R.id.action_to_animator)),
         NavItem(R.string.title_animator_circular_reveal, ActionOnlyNavDirections(R.id.action_to_animator_circular_reveal)),
-        NavItem(R.string.title_animator_state_list, ActionOnlyNavDirections(R.id.action_to_animator_state_list) )
-
+        NavItem(R.string.title_animator_state_list, ActionOnlyNavDirections(R.id.action_to_animator_state_list)),
+        NavItem(R.string.title_dynamic_fling, ActionOnlyNavDirections(R.id.action_dynamic_fling))
     )
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         return LayoutInflater.from(parent.context)
