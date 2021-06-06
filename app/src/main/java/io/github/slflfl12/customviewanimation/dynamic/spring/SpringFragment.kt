@@ -17,7 +17,7 @@ import io.github.slflfl12.customviewanimation.R
 import io.github.slflfl12.customviewanimation.databinding.FragmentDynamicSpringBinding
 import io.github.slflfl12.customviewanimation.interpolator.Interpolators
 
-class SpringFragment : Fragment() {
+class SpringFragment : Fragment(), ViewAnimation {
 
     private var maxTranslationX: Float = 0f
     private var maxTranslationY: Float = 0f
@@ -59,8 +59,11 @@ class SpringFragment : Fragment() {
 
             var reverse = false
             animator.doOnRepeat {
+                animateHeaderUi(reverse)
 
+                reverse = !reverse
             }
+            animator.start()
         }
 
 
@@ -82,7 +85,19 @@ class SpringFragment : Fragment() {
     }
 
     private fun animateHeaderUi(reverse: Boolean) {
-
+        if(reverse) {
+            binding.dim.animateOutForDim()
+            binding.flashButton.animateOutForHeader()
+            binding.startButton.animateOutForHeader()
+            binding.toyButton.animateOutForHeader()
+            binding.closeButton.animateOutForCloseButton()
+        } else {
+            binding.dim.animateInForDim()
+            binding.flashButton.animateInForHeader()
+            binding.startButton.animateInForHeader()
+            binding.toyButton.animateOutForHeader()
+            binding.closeButton.animateInForCloseButton()
+        }
     }
 
 }
