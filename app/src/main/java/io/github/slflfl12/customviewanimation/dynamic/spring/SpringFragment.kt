@@ -60,7 +60,23 @@ class SpringFragment : Fragment(), ViewAnimation {
             var reverse = false
             animator.doOnRepeat {
                 animateHeaderUi(reverse)
-
+                if(reverse) {
+                    iconTransX.animateToFinalPosition(0f)
+                    iconTransY.animateToFinalPosition(0f)
+                    iconRotation.animateToFinalPosition(0f)
+                    iconScaleX.animateToFinalPosition(1f)
+                    iconScaleY.animateToFinalPosition(1f)
+                    iconAlpha.animateToFinalPosition(1f)
+                    bugSpring.animateToFinalPosition(0f)
+                } else {
+                    iconTransX.animateToFinalPosition(maxTranslationX)
+                    iconTransY.animateToFinalPosition(maxTranslationY)
+                    iconRotation.animateToFinalPosition(360f)
+                    iconScaleX.animateToFinalPosition(2f)
+                    iconScaleY.animateToFinalPosition(.5f)
+                    iconAlpha.animateToFinalPosition(.5f)
+                    bugSpring.animateToFinalPosition(maxTranslationX)
+                }
                 reverse = !reverse
             }
             animator.start()
@@ -95,7 +111,7 @@ class SpringFragment : Fragment(), ViewAnimation {
             binding.dim.animateInForDim()
             binding.flashButton.animateInForHeader()
             binding.startButton.animateInForHeader()
-            binding.toyButton.animateOutForHeader()
+            binding.toyButton.animateInForHeader()
             binding.closeButton.animateInForCloseButton()
         }
     }

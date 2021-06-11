@@ -26,11 +26,13 @@ interface ViewAnimation {
     }
 
     fun View.animateInForCloseButton() {
+        spring(ALPHA).animateToFinalPosition(0f)
         spring(ROTATION).animateToFinalPosition(0f)
         spring(TRANSLATION_Y).animateToFinalPosition(0f)
     }
 
     fun View.animateOutForCloseButton() {
+        spring(ALPHA).animateToFinalPosition(1f)
         spring(ROTATION).animateToFinalPosition(-90f)
         spring(TRANSLATION_Y).animateToFinalPosition((-width).toFloat())
     }
