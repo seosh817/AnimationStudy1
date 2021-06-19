@@ -64,6 +64,21 @@
         android:name="io.github.slflfl12.customviewanimation.sla.StateListAnimatorFragment"
         android:label="StateListAnimatorFragment" />
 
+    <fragment
+        android:id="@+id/flingFragment"
+        android:name="io.github.slflfl12.customviewanimation.dynamic.fling.FlingFragment"
+        android:label="FlingFragment" />
+
+    <fragment
+        android:id="@+id/springFragment"
+        android:name="io.github.slflfl12.customviewanimation.dynamic.spring.SpringFragment"
+        android:label="SpringFragment" />
+
+    <fragment
+        android:id="@+id/springRecyclerViewFragment"
+        android:name="io.github.slflfl12.customviewanimation.dynamic.spring.recycler_view.SpringRecyclerViewFragment"
+        android:label="SpringRecyclerViewFragment" />
+
     <action
         android:id="@+id/action_to_interpolator"
         app:destination="@id/interpolator" />
@@ -107,6 +122,20 @@
     <action
         android:id="@+id/action_to_animator_state_list"
         app:destination="@id/stateListAnimatorFragment" />
+
+    <action
+        android:id="@+id/action_to_dynamic_fling"
+        app:destination="@id/flingFragment" />
+
+    <action
+        android:id="@+id/action_to_dynamic_spring"
+        app:destination="@id/springFragment"
+        />
+
+    <action
+        android:id="@+id/action_to_dynamic_spring_recycler_view"
+        app:destination="@id/springRecyclerViewFragment"
+        />
 
 
 </navigation>
