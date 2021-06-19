@@ -1,4 +1,6 @@
 package io.github.slflfl12.customviewanimation.dynamic.spring.recycler_view
 
-class Item {
-}
+data class Item(
+    val id: Int,
+    val backgroundColor: Int
+)

@@ -14,10 +14,7 @@ class ViewPropertyRecyclerAdapter: ListAdapter<Item, ViewPropertyRecyclerAdapter
     private val list = arrayListOf<Item>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewPropertyViewHolder {
-        return ItemViewPropertyBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-            .let {
-                ViewPropertyViewHolder(it)
-            }
+        return ViewPropertyViewHolder(ItemViewPropertyBinding.inflate(LayoutInflater.from(parent.context), parent, false))
             .apply {
                 itemView.setOnClickListener {
                     getItemOrNull(adapterPosition)?.let {

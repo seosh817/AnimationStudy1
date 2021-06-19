@@ -6,12 +6,16 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.SpringSlideInAnimator
 import io.github.slflfl12.customviewanimation.R
 import io.github.slflfl12.customviewanimation.databinding.FragmentDynamicSpringRecyclerViewBinding
 
 class SpringRecyclerViewFragment: Fragment() {
 
     private lateinit var binding: FragmentDynamicSpringRecyclerViewBinding
+    private val listAdapter: SpringRecyclerViewAdapter by lazy {
+        SpringRecyclerViewAdapter()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -24,6 +28,10 @@ class SpringRecyclerViewFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.listView.itemAnimator = SpringSlideInAnimator()
+        binding.listView.adapter = listAdapter
+        binding.fab.setOnClickListener {
+            listAdapter.shuffle()
+        }
     }
 }
