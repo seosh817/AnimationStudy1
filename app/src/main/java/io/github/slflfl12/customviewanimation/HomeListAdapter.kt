@@ -26,7 +26,8 @@ class HomeListAdapter : RecyclerView.Adapter<HomeListAdapter.MainViewHolder>() {
         NavItem(R.string.title_dynamic_fling, ActionOnlyNavDirections(R.id.action_to_dynamic_fling)),
         NavItem(R.string.title_dynamic_spring, ActionOnlyNavDirections(R.id.action_to_dynamic_spring)),
         NavItem(R.string.title_dynamic_spring_recycler_view, ActionOnlyNavDirections(R.id.action_to_dynamic_spring_recycler_view)),
-    )
+        NavItem(R.string.title_transition, ActionOnlyNavDirections(R.id.action_to_transtion)),
+        )
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {

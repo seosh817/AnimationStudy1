@@ -15,4 +15,5 @@
     <string name="title_dynamic_fling">Fling Animation</string>
     <string name="title_dynamic_spring">Spring Animation</string>
     <string name="title_dynamic_spring_recycler_view">Spring Animation (RecyclerView)</string>
+    <string name="title_transition">Transition Animation</string>
 </resources>
