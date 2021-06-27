@@ -27,6 +27,8 @@ class HomeListAdapter : RecyclerView.Adapter<HomeListAdapter.MainViewHolder>() {
         NavItem(R.string.title_dynamic_spring, ActionOnlyNavDirections(R.id.action_to_dynamic_spring)),
         NavItem(R.string.title_dynamic_spring_recycler_view, ActionOnlyNavDirections(R.id.action_to_dynamic_spring_recycler_view)),
         NavItem(R.string.title_transition, ActionOnlyNavDirections(R.id.action_to_transtion)),
+        NavItem(R.string.title_shared_elements, ActionOnlyNavDirections(R.id.action_to_shared_elements)),
+        NavItem(R.string.title_shared_elements_detail, ActionOnlyNavDirections(R.id.action_to_shared_elements_detail)),
         )
 
 
