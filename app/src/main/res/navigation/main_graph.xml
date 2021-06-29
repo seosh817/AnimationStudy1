@@ -84,6 +84,17 @@
         android:name="io.github.slflfl12.customviewanimation.transition.TransitionFragment"
         android:label="TransitionFragment" />
 
+    <fragment
+        android:id="@+id/sharedElementsFragment"
+        android:name="io.github.slflfl12.customviewanimation.shared_elements.SharedElementsFragment"
+        android:label="SharedElementsFragment" />
+
+    <fragment
+        android:id="@+id/sharedElementsDetailFragment"
+        android:name="io.github.slflfl12.customviewanimation.shared_elements.SharedElementsDetailFragment"
+        android:label="SharedElementsDetailFragment" />
+
+
     <action
         android:id="@+id/action_to_interpolator"
         app:destination="@id/interpolator" />
@@ -144,5 +155,12 @@
         android:id="@+id/action_to_transtion"
         app:destination="@id/transitionFragment" />
 
+    <action
+        android:id="@+id/action_to_shared_elements"
+        app:destination="@id/sharedElementsFragment" />
+
+    <action
+        android:id="@+id/action_to_shared_elements_detail"
+        app:destination="@id/sharedElementsDetailFragment" />
 
 </navigation>

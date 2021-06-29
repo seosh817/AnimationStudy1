@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android"
+    android:transitionOrdering="sequential">
+    <explode android:transitionVisibilityMode="mode_in|mode_out"> <!--Explode, Slide, Fade https://www.youtube.com/watch?v=B2jZ439bytI-->
+        <targets>
+            <target android:excludeId="@id/appBar" /> <!--제외하고 전부-->
+        </targets>
+    </explode>
+    <changeBounds>
+        <targets>
+            <target android:excludeId="@id/androidImage" />
+        </targets>
+    </changeBounds>
+</transitionSet>
