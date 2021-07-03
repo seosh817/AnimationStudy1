@@ -5,7 +5,6 @@ import android.os.Parcel
 import android.os.Parcelable
 import android.util.AttributeSet
 import android.view.View
-import android.view.ViewGroup
 import android.view.ViewParent
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
@@ -16,7 +15,6 @@ class CollapsingConstraintLayout @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-
     ) : ConstraintLayout(context, attrs, defStyleAttr), AppBarLayout.OnOffsetChangedListener {
 
     private var appBarLayoutId: Int = NO_ID
@@ -41,8 +39,9 @@ class CollapsingConstraintLayout @JvmOverloads constructor(
         return parent as? AppBarLayout ?: parent?.findAppBarLayout()
     }
 
-    override fun attachViewToParent(child: View?, index: Int, params: ViewGroup.LayoutParams?) {
-        super.attachViewToParent(child, index, params)
+
+    override fun onAttachedToWindow() {
+        super.onAttachedToWindow()
         findAppBarLayout()?.addOnOffsetChangedListener(this)
     }
 
@@ -74,7 +73,6 @@ class CollapsingConstraintLayout @JvmOverloads constructor(
     }
 
     override fun onRestoreInstanceState(state: Parcelable?) {
-        super.onRestoreInstanceState(state)
         if(state is SavedState) {
             super.onRestoreInstanceState(state.superState)
             setProgress(state.progress)

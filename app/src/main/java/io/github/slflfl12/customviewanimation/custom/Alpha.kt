@@ -49,7 +49,17 @@ class Alpha @JvmOverloads constructor(
 
 
     override fun setProgress(progress: Float) {
+        this.progress = progress
 
+        views.forEach {
+            it.alpha = interpolator.getInterpolation(
+                if (reverse) {
+                    progress
+                } else {
+                    1f - progress
+                }
+            )
+        }
     }
 
     override fun getProgress(): Float = progress
