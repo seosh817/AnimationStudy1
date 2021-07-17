@@ -94,6 +94,10 @@
         android:name="io.github.slflfl12.customviewanimation.shared_elements.SharedElementsDetailFragment"
         android:label="SharedElementsDetailFragment" />
 
+    <fragment
+        android:id="@+id/customConstraintLayoutFragment"
+        android:name="io.github.slflfl12.customviewanimation.custom.CustomConstraintLayoutFragment"
+        android:label="CustomConstraintLayoutFragment" />
 
     <action
         android:id="@+id/action_to_interpolator"
@@ -162,5 +166,11 @@
     <action
         android:id="@+id/action_to_shared_elements_detail"
         app:destination="@id/sharedElementsDetailFragment" />
+
+    <action
+        android:id="@+id/action_to_custom_constraint_layout"
+        app:destination="@id/customConstraintLayoutFragment"
+        />
+
 
 </navigation>
