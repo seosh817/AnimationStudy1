@@ -99,6 +99,11 @@
         android:name="io.github.slflfl12.customviewanimation.custom.CustomConstraintLayoutFragment"
         android:label="CustomConstraintLayoutFragment" />
 
+    <fragment
+        android:id="@+id/textInputLayoutFragment"
+        android:name="io.github.slflfl12.customviewanimation.practice.textinput.TextInputLayoutFragment"
+        android:label="TextInputLayoutFragment" />
+
     <action
         android:id="@+id/action_to_interpolator"
         app:destination="@id/interpolator" />
@@ -172,5 +177,9 @@
         app:destination="@id/customConstraintLayoutFragment"
         />
 
+    <action
+        android:id="@+id/action_to_text_input_layout"
+        app:destination="@id/textInputLayoutFragment"
+        />
 
 </navigation>

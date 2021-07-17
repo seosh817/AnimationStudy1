@@ -7,13 +7,17 @@
     <color name="colorGray2">#A2A5A5</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="blue_grey">#8e8d94</color>
 
     <color name="yellow1">#C8C853</color>
     <color name="red1">#F86734</color>
+    <color name="orangey_red">#ee3939</color>
+
 
     <color name="android1">#3DDC84</color>
     <color name="android2">#0B2F41</color>
     <color name="azure">#009bff</color>
+    <color name="warm_blue">#3a63f2</color>
 
 
 

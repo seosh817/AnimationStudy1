@@ -28,8 +28,9 @@ class HomeListAdapter : RecyclerView.Adapter<HomeListAdapter.MainViewHolder>() {
         NavItem(R.string.title_dynamic_spring_recycler_view, ActionOnlyNavDirections(R.id.action_to_dynamic_spring_recycler_view)),
         NavItem(R.string.title_transition, ActionOnlyNavDirections(R.id.action_to_transtion)),
         NavItem(R.string.title_shared_elements, ActionOnlyNavDirections(R.id.action_to_shared_elements)),
-        NavItem(R.string.title_custom_constraint_layout, ActionOnlyNavDirections(R.id.action_to_custom_constraint_layout))
-        )
+        NavItem(R.string.title_custom_constraint_layout, ActionOnlyNavDirections(R.id.action_to_custom_constraint_layout)),
+        NavItem(R.string.title_text_input_layout, ActionOnlyNavDirections(R.id.action_to_text_input_layout))
+    )
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
