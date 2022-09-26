@@ -6,102 +6,102 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="io.github.slflfl12.customviewanimation.HomeFragment"
+        android:name="com.seosh817.animationcollection.HomeFragment"
         android:label="MainFragment" />
 
     <fragment
         android:id="@+id/interpolator"
-        android:name="io.github.slflfl12.customviewanimation.interpolator.InterpolatorFragment"
+        android:name="com.seosh817.animationcollection.interpolator.InterpolatorFragment"
         android:label="InterpolatorFragment" />
 
     <fragment
         android:id="@+id/drawableFragment"
-        android:name="io.github.slflfl12.customviewanimation.drawable.DrawableFragment"
+        android:name="com.seosh817.animationcollection.drawable.DrawableFragment"
         android:label="DrawableFragment" />
 
     <fragment
         android:id="@+id/rippleFragment"
-        android:name="io.github.slflfl12.customviewanimation.drawable.ripple.RippleFragment"
+        android:name="com.seosh817.animationcollection.drawable.ripple.RippleFragment"
         android:label="RippleFragment" />
 
     <fragment
         android:id="@+id/gradientFragment"
-        android:name="io.github.slflfl12.customviewanimation.drawable.gradient.GradientFragment"
+        android:name="com.seosh817.animationcollection.drawable.gradient.GradientFragment"
         android:label="GradientFragment" />
 
     <fragment
         android:id="@+id/loadingFragment"
-        android:name="io.github.slflfl12.customviewanimation.drawable.loading.LoadingFragment"
+        android:name="com.seosh817.animationcollection.drawable.loading.LoadingFragment"
         android:label="LoadingFragment" />
 
     <fragment
         android:id="@+id/viewAnimFragment"
-        android:name="io.github.slflfl12.customviewanimation.viewanim.ViewAnimationFragment"
+        android:name="com.seosh817.animationcollection.viewanim.ViewAnimationFragment"
         android:label="ViewAnimationFragment" />
 
     <fragment
         android:id="@+id/viewPropertyFragment"
-        android:name="io.github.slflfl12.customviewanimation.view_property.ViewPropertyFragment"
+        android:name="com.seosh817.animationcollection.view_property.ViewPropertyFragment"
         android:label="ViewPropertyFragment" />
 
     <fragment
         android:id="@+id/recyclerViewFragment"
-        android:name="io.github.slflfl12.customviewanimation.view_property.recycler_view.RecyclerViewFragment"
+        android:name="com.seosh817.animationcollection.view_property.recycler_view.RecyclerViewFragment"
         android:label="RecyclerViewFragment" />
 
     <fragment
         android:id="@+id/animatorFragment"
-        android:name="io.github.slflfl12.customviewanimation.animator.AnimatorFragment"
+        android:name="com.seosh817.animationcollection.animator.AnimatorFragment"
         android:label="AnimatorFragment" />
 
     <fragment
         android:id="@+id/circularRevealFragment"
-        android:name="io.github.slflfl12.customviewanimation.animator.reveal.CircularRevealFragment"
+        android:name="com.seosh817.animationcollection.animator.reveal.CircularRevealFragment"
         android:label="CircularRevealFragment" />
 
     <fragment
         android:id="@+id/stateListAnimatorFragment"
-        android:name="io.github.slflfl12.customviewanimation.sla.StateListAnimatorFragment"
+        android:name="com.seosh817.animationcollection.sla.StateListAnimatorFragment"
         android:label="StateListAnimatorFragment" />
 
     <fragment
         android:id="@+id/flingFragment"
-        android:name="io.github.slflfl12.customviewanimation.dynamic.fling.FlingFragment"
+        android:name="com.seosh817.animationcollection.dynamic.fling.FlingFragment"
         android:label="FlingFragment" />
 
     <fragment
         android:id="@+id/springFragment"
-        android:name="io.github.slflfl12.customviewanimation.dynamic.spring.SpringFragment"
+        android:name="com.seosh817.animationcollection.dynamic.spring.SpringFragment"
         android:label="SpringFragment" />
 
     <fragment
         android:id="@+id/springRecyclerViewFragment"
-        android:name="io.github.slflfl12.customviewanimation.dynamic.spring.recycler_view.SpringRecyclerViewFragment"
+        android:name="com.seosh817.animationcollection.dynamic.spring.recycler_view.SpringRecyclerViewFragment"
         android:label="SpringRecyclerViewFragment" />
 
     <fragment
         android:id="@+id/transitionFragment"
-        android:name="io.github.slflfl12.customviewanimation.transition.TransitionFragment"
+        android:name="com.seosh817.animationcollection.transition.TransitionFragment"
         android:label="TransitionFragment" />
 
     <fragment
         android:id="@+id/sharedElementsFragment"
-        android:name="io.github.slflfl12.customviewanimation.shared_elements.SharedElementsFragment"
+        android:name="com.seosh817.animationcollection.shared_elements.SharedElementsFragment"
         android:label="SharedElementsFragment" />
 
     <fragment
         android:id="@+id/sharedElementsDetailFragment"
-        android:name="io.github.slflfl12.customviewanimation.shared_elements.SharedElementsDetailFragment"
+        android:name="com.seosh817.animationcollection.shared_elements.SharedElementsDetailFragment"
         android:label="SharedElementsDetailFragment" />
 
     <fragment
         android:id="@+id/customConstraintLayoutFragment"
-        android:name="io.github.slflfl12.customviewanimation.custom.CustomConstraintLayoutFragment"
+        android:name="com.seosh817.animationcollection.custom.CustomConstraintLayoutFragment"
         android:label="CustomConstraintLayoutFragment" />
 
     <fragment
         android:id="@+id/textInputLayoutFragment"
-        android:name="io.github.slflfl12.customviewanimation.practice.textinput.TextInputLayoutFragment"
+        android:name="com.seosh817.animationcollection.practice.textinput.TextInputLayoutFragment"
         android:label="TextInputLayoutFragment" />
 
     <action

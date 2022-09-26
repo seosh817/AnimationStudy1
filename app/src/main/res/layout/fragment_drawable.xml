@@ -37,14 +37,14 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <io.github.slflfl12.customviewanimation.drawable.AnimatedImageView
+                <com.seosh817.animationcollection.drawable.AnimatedImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="4dp"
                     android:scaleType="centerInside"
                     android:src="@drawable/ic_battery_anim" />
 
-                <io.github.slflfl12.customviewanimation.drawable.AnimatedImageView
+                <com.seosh817.animationcollection.drawable.AnimatedImageView
                     android:id="@+id/iv_battery_clip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
 
             </LinearLayout>
 
-            <io.github.slflfl12.customviewanimation.drawable.AnimatedImageView
+            <com.seosh817.animationcollection.drawable.AnimatedImageView
                 android:id="@+id/iv_rotate"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
@@ -64,7 +64,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/ll_battery" />
 
-            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+            <com.seosh817.animationcollection.drawable.CheckedImageView
                 android:id="@+id/iv_animated_check"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
@@ -74,7 +74,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_rotate" />
 
-            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+            <com.seosh817.animationcollection.drawable.CheckedImageView
                 android:id="@+id/iv_landscape"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
@@ -85,7 +85,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_animated_check" />
 
-            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+            <com.seosh817.animationcollection.drawable.CheckedImageView
                 android:id="@+id/iv_portrait"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
@@ -96,7 +96,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_landscape" />
 
-            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+            <com.seosh817.animationcollection.drawable.CheckedImageView
                 android:id="@+id/iv_flash"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
@@ -107,7 +107,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_portrait" />
 
-            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+            <com.seosh817.animationcollection.drawable.CheckedImageView
                 android:id="@+id/iv_battery_vertical_checked"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
@@ -118,7 +118,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/iv_flash" />
 
-            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+            <com.seosh817.animationcollection.drawable.CheckedImageView
                 android:id="@+id/iv_star_icon"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"

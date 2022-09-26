@@ -17,7 +17,7 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             >
 
-            <io.github.slflfl12.customviewanimation.custom.CollapsingConstraintLayout
+            <com.seosh817.animationcollection.custom.CollapsingConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
@@ -35,7 +35,7 @@
                     android:background="@color/azure"
                     app:tint="@color/yellow1" />
 
-                <io.github.slflfl12.customviewanimation.custom.Alpha
+                <com.seosh817.animationcollection.custom.Alpha
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:constraint_referenced_ids="image"
@@ -51,7 +51,7 @@
                     app:title="@string/title_custom_constraint_layout" />
 
 
-            </io.github.slflfl12.customviewanimation.custom.CollapsingConstraintLayout>
+            </com.seosh817.animationcollection.custom.CollapsingConstraintLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.recyclerview.widget.RecyclerView

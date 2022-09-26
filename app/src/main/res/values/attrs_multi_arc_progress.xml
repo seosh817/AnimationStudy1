@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MultiArcProgressView">
+        <attr name="progressWidth" format="dimension"/>
+        <attr name="barSpace" format="dimension"/>
+        <attr name="radius" format="dimension"/>
+        <attr name="barCount" format="integer"/>
+        <attr name="startArc" format="integer"/>
+        <attr name="endArc" format="integer" />
+        <attr name="percentage" format="float" />
+        <attr name="progressColor" format="color" />
+        <attr name="emptyColor" format="color" />
+    </declare-styleable>
+
+</resources>

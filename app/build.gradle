@@ -9,7 +9,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "io.github.slflfl12.customviewanimation"
+        applicationId "com.seosh817.animation_collection"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1

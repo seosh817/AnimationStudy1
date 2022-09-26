@@ -20,7 +20,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <io.github.slflfl12.customviewanimation.interpolator.InterpolatorView
+                <com.seosh817.animationcollection.interpolator.InterpolatorView
                     android:layout_width="180dp"
                     android:layout_height="180dp"
                     android:layout_gravity="center_horizontal"
@@ -33,7 +33,7 @@
                     android:layout_gravity="center_horizontal"
                     android:text="Linear" />
 
-                <io.github.slflfl12.customviewanimation.interpolator.InterpolatorView
+                <com.seosh817.animationcollection.interpolator.InterpolatorView
                     android:layout_width="180dp"
                     android:layout_height="180dp"
                     android:layout_gravity="center_horizontal"

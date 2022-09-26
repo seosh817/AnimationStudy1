@@ -4,8 +4,8 @@ import android.annotation.SuppressLint
 import android.view.Gravity
 import android.view.View
 import androidx.dynamicanimation.animation.SpringAnimation.*
-import io.github.slflfl12.customviewanimation.util.listenForAllSpringsEnd
-import io.github.slflfl12.customviewanimation.util.spring
+import com.seosh817.animationcollection.util.listenForAllSpringsEnd
+import com.seosh817.animationcollection.util.spring
 
 /**
  * A [RecyclerView.ItemAnimator] that fades & slides newly added items in from a given
