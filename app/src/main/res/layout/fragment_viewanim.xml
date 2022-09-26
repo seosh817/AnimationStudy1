@@ -29,7 +29,7 @@
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+            <com.seosh817.animationcollection.drawable.CheckedImageView
                 android:id="@+id/icon"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"

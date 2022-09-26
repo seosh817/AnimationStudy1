@@ -1,4 +1,4 @@
 include ':prac'
 include ':RotationLayout'
 include ':app'
-rootProject.name = "CustomViewAnimation"
+rootProject.name = "AnimationCollection"

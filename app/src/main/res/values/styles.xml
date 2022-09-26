@@ -2,10 +2,90 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/azure</item>
+        <item name="colorPrimaryDark">@color/azure</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="colorControlNormal">@color/blue_grey</item>
+        <item name="colorControlActivated">@color/black
+        </item> <!--touch tool tip color, Focused underline color-->
+        <item name="colorControlHighlight">@color/yellow1</item> <!--Focused underline color -->
+
+    </style>
+
+    <style name="AppCompatTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:colorControlHighlight">@color/yellow1</item>
     </style>
 
+
+    <style name="MaterialDarkNoActionBarTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+        <item name="colorControlNormal">@color/blue_grey</item> <!--UnFocused underline color -->
+        <item name="colorControlActivated">@color/yellow1
+        </item> <!--touch tool tip color, Focused underline color-->
+    </style>
+
+    <style name="TextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+        <!--FilledBox일 경우 밑줄 색상, OutlinedBox일 경우 테두리 색상-->
+        <item name="boxStrokeColor">@color/selector_text_input_outlined_color</item>
+        <!--Counter-->
+        <item name="counterTextAppearance">@style/CounterTextAppearance</item>
+        <!--EditText에 있을때의 Hint-->
+        <item name="android:textColorHint">@color/blue_grey</item>
+        <!--상단에 있을때의 Hint-->
+        <item name="hintTextColor">@color/blue_grey</item>
+        <item name="hintTextAppearance">@style/HintTextAppearance</item>
+        <!--Helper-->
+        <item name="helperTextTextAppearance">@style/HelperTextAppearance</item>
+        <!--Error-->
+        <item name="errorEnabled">true</item>
+        <item name="colorError">@color/orangey_red</item>
+        <item name="errorIconDrawable">@android:color/transparent</item>
+        <item name="errorTextAppearance">@style/ErrorTextAppearance</item>
+    </style>
+
+    <style name="TextInputLayoutThemeOverlay">
+        <item name="colorControlNormal">@color/blue_grey</item> <!--UnFocused underline color -->
+        <item name="colorControlActivated">@color/yellow1
+        </item> <!--touch tool tip color, Focused underline color-->
+    </style>
+
+    <style name="ErrorTextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="HintTextAppearance">
+        <item name="android:fontFamily">@font/noto_sans_kr_regular</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="HelperTextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CounterTextAppearance">
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextInputEditTextStyle">
+        <item name="android:textStyle">normal</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
 </resources>
+

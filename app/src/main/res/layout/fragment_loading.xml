@@ -109,7 +109,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/pb_loading_horizontal_custom" />
 
-            <io.github.slflfl12.customviewanimation.drawable.loading.StageView
+            <com.seosh817.animationcollection.drawable.loading.StageView
                 android:id="@+id/pb_stage_view"
                 android:layout_width="0dp"
                 android:layout_height="76dp"

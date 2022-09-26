@@ -20,4 +20,6 @@
     <string name="title_shared_elements_detail">Shared Elements (Detail)</string>
     <string name="transition_name_android" translatable="false">android</string>
     <string name="title_custom_constraint_layout">Custom (Constraint layout)</string>
+    <string name="title_text_input_layout">TextInputLayout</string>
+    <string name="text_input_layout_hint">4글자 이하로 입력해주세요.</string>
 </resources>

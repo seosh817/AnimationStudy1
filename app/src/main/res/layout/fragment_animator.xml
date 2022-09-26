@@ -58,7 +58,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+            <com.seosh817.animationcollection.drawable.CheckedImageView
                 android:id="@+id/icon"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"
@@ -69,7 +69,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_chainStyle="packed" />
 
-            <io.github.slflfl12.customviewanimation.drawable.CheckedImageView
+            <com.seosh817.animationcollection.drawable.CheckedImageView
                 android:id="@+id/bug"
                 android:layout_width="@dimen/icon_size"
                 android:layout_height="@dimen/icon_size"

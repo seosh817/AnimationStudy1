@@ -36,40 +36,40 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
-                <io.github.slflfl12.customviewanimation.drawable.gradient.AnimatedFadeImageView
+                <com.seosh817.animationcollection.drawable.gradient.AnimatedFadeImageView
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:layout_margin="4dp"
                     android:src="@drawable/animation_gradient" />
 
-                <io.github.slflfl12.customviewanimation.drawable.gradient.AnimatedGradientView
+                <com.seosh817.animationcollection.drawable.gradient.AnimatedGradientView
                     android:id="@+id/gradient_rect"
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:layout_margin="4dp" />
 
-                <io.github.slflfl12.customviewanimation.drawable.gradient.AnimatedGradientView
+                <com.seosh817.animationcollection.drawable.gradient.AnimatedGradientView
                     android:id="@+id/gradient_circle"
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:layout_margin="4dp" />
-                <io.github.slflfl12.customviewanimation.drawable.gradient.AnimatedGradientView
+                <com.seosh817.animationcollection.drawable.gradient.AnimatedGradientView
                     android:id="@+id/gradient_round_rect"
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:layout_margin="4dp" />
-                <io.github.slflfl12.customviewanimation.drawable.gradient.AnimatedBorderView
+                <com.seosh817.animationcollection.drawable.gradient.AnimatedBorderView
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:layout_margin="4dp"
                     app:borderWidth="8dp"
                     />
-                <io.github.slflfl12.customviewanimation.drawable.gradient.AnimatedStarView
+                <com.seosh817.animationcollection.drawable.gradient.AnimatedStarView
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:layout_margin="4dp"
                     />
-                <io.github.slflfl12.customviewanimation.drawable.gradient.AnimatedStarView
+                <com.seosh817.animationcollection.drawable.gradient.AnimatedStarView
                     android:layout_width="@dimen/icon_size"
                     android:layout_height="@dimen/icon_size"
                     android:layout_margin="4dp"
